@@ -7,10 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class CashbackHackServiceTest {
 
     @Test
-    void shouldNotReturnCashbackIfAmountIs1000() {
-        CashbackHackService cashbackHackService;
-        cashbackHackService = new CashbackHackService();
-        System.out.println();
+    void shouldReturnCashbackIfAmountIsPositiveAndLess1000() {
+        CashbackHackService cashbackHackService = new CashbackHackService();
         int amount = 900;
         int actual = cashbackHackService.remain(amount);
         int expected = 100;
@@ -18,10 +16,8 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldReturnCashbackIfAmountIsNot1000() {
-        CashbackHackService cashbackHackService;
-        cashbackHackService = new CashbackHackService();
-        System.out.println();
+    void shouldNotReturnCashbackIfAmountIsDevisibleBy1000() {
+        CashbackHackService cashbackHackService = new CashbackHackService();
         int amount = 1000;
         int actual = cashbackHackService.remain(amount);
         int expected = 0;
