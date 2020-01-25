@@ -16,7 +16,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldNotReturnCashbackIfAmountIsDevisibleBy1000() {
+    void shouldNotReturnCashbackIfAmountIsDivisibleBy1000() {
         CashbackHackService cashbackHackService = new CashbackHackService();
         int amount = 1000;
         int actual = cashbackHackService.remain(amount);
